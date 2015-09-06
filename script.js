@@ -15,16 +15,20 @@ angular.module('app').controller('mainCtrl', function($scope) {
     ]
   }
 
+  console.log($scope);
+
 });
 
 angular.module('app').directive('userInfoCard', function() {
   return {
     templateUrl: "userInfoCard.html",
     restrict: "E",
+    scope: true,
     controller: function($scope) {
       $scope.knightMe = function(user) {
         user.rank = "knight";
       }
+      console.log($scope);
     }
   }
 });
