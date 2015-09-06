@@ -9,16 +9,22 @@ angular.module('app').controller('mainCtrl', function($scope) {
       planet: 'Tatooine'
     },
     friends: [
-        'Han',
-        'Leia',
-        'Chewbacca'
+      'Han',
+      'Leia',
+      'Chewbacca'
     ]
   }
+
 });
 
 angular.module('app').directive('userInfoCard', function() {
-    return {
-      templateUrl: "userInfoCard.html",
-      restrict: "E"
+  return {
+    templateUrl: "userInfoCard.html",
+    restrict: "E",
+    controller: function($scope) {
+      $scope.knightMe = function(user) {
+        user.rank = "knight";
+      }
     }
+  }
 });
