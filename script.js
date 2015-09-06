@@ -23,7 +23,7 @@ angular.module('app').directive('userInfoCard', function() {
   return {
     templateUrl: "userInfoCard.html",
     restrict: "E",
-    scope: true,
+    scope: {},
     controller: function($scope) {
       $scope.knightMe = function(user) {
         user.rank = "knight";
